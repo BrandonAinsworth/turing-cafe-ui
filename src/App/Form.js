@@ -29,12 +29,13 @@ submitReservation = (event) => {
 
 render() {
     return (
-        <form>
+        <form data-cy="res-form">
             <input 
             type='text'
             name="name"
             placeholder="Name"
             value={this.state.name}
+            data-cy="input-name"
             onChange={event => this.onChange(event)}
             />
              <input 
@@ -42,6 +43,7 @@ render() {
             name="date"
             placeholder="Date (mm/dd)"
             value={this.state.date}
+            data-cy="input-date"
             onChange={event => this.onChange(event)}
             />
              <input 
@@ -49,6 +51,7 @@ render() {
             name="time"
             placeholder="Time"
             value={this.state.time}
+            data-cy="input-time"
             onChange={event => this.onChange(event)}
             />
              <input 
@@ -56,9 +59,10 @@ render() {
             name="number"
             placeholder="Number of guests"
             value={this.state.number}
+            data-cy="input-number"
             onChange={event => this.onChange(event)}
             />
-           <button onClick={event => this.submitReservation(event)}>Make Reservation</button>
+           <button data-cy="submit-button" onClick={event => this.submitReservation(event)}>Make Reservation</button>
         </form>
     )
 }

@@ -25,7 +25,6 @@ componentDidMount = () => {
 
 addReservation = (newReservation) => {
  newReservation.number = parseInt(newReservation.number)
- console.log(newReservation)
   this.setState({
   reservations: [...this.state.reservations , newReservation]
   }
@@ -36,8 +35,8 @@ addReservation = (newReservation) => {
   render() {
     return (
       <div className="App">
-        <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <div className='resy-form'>
+        <h1 data-cy="app-title" className='app-title'>Turing Cafe Reservations</h1>
+        <div data-cy="app-form" className='resy-form'>
           <Form length={this.state.reservations.length} addReservation={this.addReservation}/>
         </div>
         <div className='resy-container'>
