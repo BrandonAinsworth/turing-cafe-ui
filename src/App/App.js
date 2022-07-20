@@ -25,9 +25,9 @@ componentDidMount = () => {
 
 addReservation = (newReservation) => {
   this.setState({
-    ...this.state.reservations ,
-    newReservation
-  })
+  reservations: [...this.state.reservations , newReservation]
+  }
+  )
 }
 
 
