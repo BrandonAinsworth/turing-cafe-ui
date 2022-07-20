@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Reservations from './Reservations';
 import './App.css';
 
 class App extends Component {
@@ -24,7 +25,6 @@ componentDidMount = () => {
   render() {
     return (
       <div className="App">
-        {console.log(this.state.reservations)}
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
 
