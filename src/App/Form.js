@@ -18,6 +18,15 @@ onChange = (event) => {
     });
 }
 
+submitReservation = (event) => {
+    event.preventDefault()
+    const newReservation = {
+        id: this.props.length + 1 ,
+        ...this.state
+    }
+    this.props.addReservation(newReservation)
+}
+
 render() {
     return (
         <form>
@@ -49,7 +58,7 @@ render() {
             value={this.state.number}
             onChange={event => this.onChange(event)}
             />
-           <button>Make Reservation</button>
+           <button onClick={event => this.submitReservation(event)}>Make Reservation</button>
         </form>
     )
 }

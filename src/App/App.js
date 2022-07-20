@@ -23,12 +23,20 @@ componentDidMount = () => {
     })
 }
 
+addReservation = (newReservation) => {
+  this.setState({
+    ...this.state.reservations ,
+    newReservation
+  })
+}
+
+
   render() {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-          <Form />
+          <Form length={this.state.reservations.length} addReservation={this.addReservation}/>
         </div>
         <div className='resy-container'>
           <Reservations reservations={this.state.reservations}/>
