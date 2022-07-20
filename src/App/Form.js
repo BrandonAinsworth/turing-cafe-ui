@@ -55,7 +55,7 @@ render() {
             type='text'
             name="number"
             placeholder="Number of guests"
-            value={parseInt(this.state.number)}
+            value={this.state.number}
             onChange={event => this.onChange(event)}
             />
            <button onClick={event => this.submitReservation(event)}>Make Reservation</button>

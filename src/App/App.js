@@ -24,6 +24,8 @@ componentDidMount = () => {
 }
 
 addReservation = (newReservation) => {
+ newReservation.number = parseInt(newReservation.number)
+ console.log(newReservation)
   this.setState({
   reservations: [...this.state.reservations , newReservation]
   }
