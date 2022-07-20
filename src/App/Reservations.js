@@ -18,7 +18,7 @@ const Reservations = ({ reservations  }) => {
 )})
 
 return (
-    <div>{resMap}</div>
+    <div className="reservation-grid">{resMap}</div>
 )
 }
 

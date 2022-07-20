@@ -42,7 +42,7 @@ it('Should render make reserveration button', () => {
 })
 
 it('Should render current reservations (with/o POST)', () => {
-    cy.get('[data-cy="reservation"]').should('have.length', 9)
+    cy.get('[data-cy="reservation"]').should('have.length', 10)
 })
 
 it('Should render a reservations details', () => {
