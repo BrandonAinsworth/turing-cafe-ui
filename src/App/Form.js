@@ -25,7 +25,22 @@ submitReservation = (event) => {
         ...this.state
     }
     this.props.addReservation(newReservation)
+
+    fetch('http://localhost:3001/api/v1/reservations' , {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json'
+            } ,
+        body: JSON.stringify({
+            id: newReservation.id ,
+            name: newReservation.name ,
+            date: newReservation.date, 
+            time: newReservation.time, 
+            number: newReservation.number
+        })   
+    })
 }
+
 
 render() {
     return (
